@@ -29,7 +29,13 @@ def promedio(numeros):
     # Alumno:
     # 1) calcule el promedio
     # 2) use "return" para retornar ese valor
-    pass  # Cuando termine de implementar está función borrar "pass"
+
+    if numeros == []:
+        return None
+
+    else:
+        prom = sum(numeros) / len(numeros)
+        return prom
 
 
 def ej1():
@@ -78,8 +84,17 @@ def ej2():
 
     # Llamar a la función en este lugar y capturar el valor del retorno
     # promedio_re
+    promedio_re = promedio(numeros)
 
     # Luego imprimir en pantalla el valor resultante, tal que:
+    print('\n\nLista de Números: {}'.format(numeros))
+
+    if promedio_re is None:
+        print('\nNo se Pudo Calcular el Promedio. La Lista está Vacía.')
+        print('Contiene 0 Elementos.\n\n')
+
+    else:
+        print('\nEl Promedio de los Números es: {}\n\n'.format(promedio_re))
 
 
 def ej3():
@@ -166,8 +181,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
-    ej1()
-    # ej2()
+    #ej1()
+    ej2()
     # ej3()
     # ej4()
     # ej5()

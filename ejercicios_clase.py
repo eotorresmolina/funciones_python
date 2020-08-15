@@ -22,7 +22,13 @@ def imprimir_nombre(nombre, apellido):
     pass
     # En este lugar debe colocar el "print" e imprimir
     # en pantalla el nombre y apellido que vienen por parámetro
+
     print('\n\nNombre: {}, Apellido: {}\n\n'.format(nombre, apellido))
+
+    # Otra Forma:
+    #name ='\n\nNombre: {}, Apellido: {}\n\n'.format(nombre, apellido)
+    #print(name)
+
 
 
 def promedio(numeros):
@@ -36,6 +42,17 @@ def promedio(numeros):
     else:
         prom = sum(numeros) / len(numeros)
         return prom
+
+
+def ordenar(numeros):
+
+    if numeros == []:
+        return None
+
+    else:
+        # Retorno la Lista Ordenada.
+        return sorted(numeros)
+
 
 
 def ej1():
@@ -97,9 +114,10 @@ def ej2():
         print('\nEl Promedio de los Números es: {}\n\n'.format(promedio_re))
 
 
+
 def ej3():
     # Ejercicios de listas y métodos
-    numeros = [2, 4, 6, 8, 10, 12]
+    numeros = [9, 1, 6, 15, 10, 12]
 
     '''
     Generar una una nueva funcion que se llame "ordenar",
@@ -113,9 +131,12 @@ def ej3():
     '''
 
     # Luego de crear la función invocarla en este lugar:
-    # lista_ordenada = ordenar(numeros)
+    lista_ordenada = ordenar(numeros)
+
     # Imprimir en pantalla "lista_ordenada" que tendrá
     # los valores retornado por la función ordenar
+    print('\n\nLa Lista de Números es: {}'.format(numeros))
+    print('\nLa Lista de Números Ordenada de Menor a Mayor es: {}\n\n'.format(lista_ordenada))
 
 
 def ej4():
@@ -182,7 +203,7 @@ def ej5():
 if __name__ == '__main__':
     print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
     #ej1()
-    ej2()
-    # ej3()
+    #ej2()
+    ej3()
     # ej4()
     # ej5()

@@ -11,8 +11,8 @@ Programa creado para poner a prueba los conocimientos
 adquiridos durante la clase
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "Emmanuel Oscar Torres Molina"
+__email__ = "emmaotm@gmail.com"
 __version__ = "1.2"
 
 import random
@@ -22,7 +22,7 @@ def imprimir_nombre(nombre, apellido):
     pass
     # En este lugar debe colocar el "print" e imprimir
     # en pantalla el nombre y apellido que vienen por parámetro
-    # print(.....)
+    print('\n\nNombre: {}, Apellido: {}\n\n'.format(nombre, apellido))
 
 
 def promedio(numeros):
@@ -33,13 +33,13 @@ def promedio(numeros):
 
 
 def ej1():
-    print('Mi primera funcion')
+    print('Mi primera función:')
     # Realice una función llamada "imprimir_nombre"
     # la cual reciba dos parámetros, el nombre y el apellido
     # Esa función ya se encuentra a medio armar al principio de este archivo.
     # Debe cumpletar la función para que se imprima en pantalla su nombre y apellido
     # Debe invocar a la función como:
-    imprimir_nombre('mi_nombre', 'mi_apellido')
+    imprimir_nombre('Emmanuel Oscar', 'Torres Molina')
 
     # Reemplazar por su nombre y apellido los textos
 
@@ -165,7 +165,7 @@ def ej5():
 
 
 if __name__ == '__main__':
-    print("Bienvenidos a otra clase de Inove con Python")
+    print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
     ej1()
     # ej2()
     # ej3()

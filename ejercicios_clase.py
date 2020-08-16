@@ -63,6 +63,10 @@ def lista_aleatoria (inicio=0, fin=1, cantidad= 1 ):
     return numeros_aleatorios
 
 
+def contar (lista_numeros, cant_veces = 1):
+    return lista_numeros.count(cant_veces)
+
+
 
 def ej1():
     print('Mi primera función:')
@@ -193,6 +197,9 @@ def ej5():
     # Ejercicios de listas y métodos
     cantidad_numeros = 5
 
+    inicio = 1
+    fin = 9
+
     '''
     Utilice la función "lista_aleatoria" para generar
     una lista de 5 números en un rango de 1 a 9 inclusive
@@ -211,11 +218,17 @@ def ej5():
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # cantidad_tres = contar(lista_numeros, 3)
 
+    lista_numeros = lista_aleatoria(inicio, fin, cantidad_numeros)
+
+    cant_repeticiones = contar(lista_numeros, cantidad_numeros)
+
+    print('\n\nLa Cantidad de Veces que se Repite es: {}\n\n'.format(cant_repeticiones))
+
 
 if __name__ == '__main__':
     print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
     #ej1()
     #ej2()
     #ej3()
-    ej4()
-    # ej5()
+    #ej4()
+    ej5()

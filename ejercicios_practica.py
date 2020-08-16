@@ -7,12 +7,12 @@ Autor: Inove Coding School
 Version: 1.3
 
 Descripcion:
-Programa creado para que practiquen los conocimietos
+Programa creado para que practiquen los conocimientos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "Emmanuel Oscar Torres Molina"
+__email__ = "emmaotm@gmail.com"
 __version__ = "1.3"
 
 

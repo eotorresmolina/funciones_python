@@ -43,14 +43,32 @@ def promedio (numeros):
 def ordenar (numeros):
     """
     Función que Recibe una lista de Nros.
-    Retorna la Lista de Nros. Ordenada de Menor a Mayor.98    """
+    Retorna la Lista de Nros. Ordenada de Menor a Mayor
+    usando la función sorted()
+
+    """
     if numeros == []:
         return None
     else:
         return sorted(numeros)  # Retorno la Lista Ordenada.
 
 
+def ordenar_2 (numeros):
+    """
+    Función que Recibe una lista de Nros.
+    Retorna la Lista de Nros. Ordenada de Menor a Mayor
+    Usando el método sort().
+
+    """
+    numeros.sort(reverse=False)  # Retorno la Lista Ordenada.
+
+
+
 def lista_aleatoria (inicio=0, fin=1, cantidad= 1 ):
+    """
+    Función que Genera una Lista de "cantidad" Nros.
+    Aleatorios entre el rango: [inicio, fin]
+    """
     # Inicializo la Lista ==> Lista Vacía
     numeros_aleatorios = []
     i = 0
@@ -63,8 +81,14 @@ def lista_aleatoria (inicio=0, fin=1, cantidad= 1 ):
     return numeros_aleatorios
 
 
-def contar (lista_numeros, cant_veces = 1):
-    return lista_numeros.count(cant_veces)
+def contar (lista_numeros, numero_repetido = 0):
+    """
+    Función que Recibe una lista de números y un valor
+    a contar.
+    Retorna la cantidad de veces que aparece dicho valor
+    en la lista.
+    """
+    return lista_numeros.count(numero_repetido)
 
 
 
@@ -143,13 +167,47 @@ def ej3():
 
     '''
 
-    # Luego de crear la función invocarla en este lugar:
-    lista_ordenada = ordenar(numeros)
+    if numeros == []:
+        print('\n\nLa Lista Está Vacía. ==> {}\n'.format(numeros))
 
-    # Imprimir en pantalla "lista_ordenada" que tendrá
-    # los valores retornado por la función ordenar
-    print('\n\nLa Lista de Números es: {}'.format(numeros))
-    print('\nLa Lista de Números Ordenada de Menor a Mayor es: {}\n\n'.format(lista_ordenada))
+    else:
+        # Luego de crear la función invocarla en este lugar:
+        lista_ordenada = ordenar(numeros)
+
+        # Imprimir en pantalla "lista_ordenada" que tendrá
+        # los valores retornado por la función ordenar
+        print('\n\nLa Lista de Números es: {}'.format(numeros))
+        print('\nLa Lista de Números Ordenada de Menor a Mayor es: {}\n'.format(lista_ordenada))
+
+
+def ej3_bis():
+    # Ejercicios de listas y métodos
+    numeros = [9, 1, 6, 15, 10, 12]
+
+    '''
+    Generar una una nueva funcion que se llame "ordenar",
+    que utilizaremos para odernar la lista de numeros.
+    Dentro de la función puede ordenar la lista
+    usando bucles o las funciones nativas de Python (sort)
+
+    Aproveche el ejemplo de "promedio" para crear una función
+    similar, la debe crear y escribir abajo de ella.
+
+    '''
+
+    if numeros == []:
+        print('\nLa Lista Está Vacía. ==> {}\n\n'.format(numeros))
+        
+    else:
+        print('\nLa Lista de Números es: {}'.format(numeros))
+
+        # Luego de crear la función invocarla en este lugar:
+
+        # Se Observa que ahora la lista 'números' cambió por ser 
+        # un Objeto de tipo 'list'. La función ahora recibe un 
+        # parámetro por referencia ==> el Objeto se Modifica.
+        ordenar_2(numeros)
+        print('\nLa Lista de Números Ordenada de Menor a Mayor es: {}\n\n'.format(numeros))
 
 
 def ej4():
@@ -195,8 +253,9 @@ def ej4():
 
 def ej5():
     # Ejercicios de listas y métodos
-    cantidad_numeros = 5
 
+    # Inicialización de Variables:
+    cantidad_numeros = 5
     inicio = 1
     fin = 9
 
@@ -212,23 +271,31 @@ def ej5():
     "count"
 
     '''
-
     # Por ejemplo creo una lista de 5 elemtnos
     # lista_numeros = lista_aleatoria(...,...,cantidad_numeros)
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # cantidad_tres = contar(lista_numeros, 3)
 
     lista_numeros = lista_aleatoria(inicio, fin, cantidad_numeros)
+    print('\n\nLa Lista Aleatoria Generada es: {}\n'.format(lista_numeros))
 
-    cant_repeticiones = contar(lista_numeros, cantidad_numeros)
+    nro_repetido = 3
+    cant_veces = contar(lista_numeros, nro_repetido)
 
-    print('\n\nLa Cantidad de Veces que se Repite es: {}\n\n'.format(cant_repeticiones))
+    if cant_veces == 0:
+        cant_repeticiones = cant_veces
+    else:
+        cant_repeticiones = cant_veces - 1
+
+    print('La Cantidad de Veces que aparece el Número {} es: {}.'.format(nro_repetido, cant_veces))
+    print('La Cantidad de Veces que se Repite el Número {} es: {}\n\n'.format(nro_repetido, cant_repeticiones))
 
 
 if __name__ == '__main__':
     print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
-    #ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej1()
+    ej2()
+    ej3()
+    ej3_bis()
+    ej4()
     ej5()

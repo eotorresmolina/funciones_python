@@ -18,40 +18,49 @@ __version__ = "1.2"
 import random
 
 
-def imprimir_nombre(nombre, apellido):
-    pass
+def imprimir_nombre (nombre, apellido):
     # En este lugar debe colocar el "print" e imprimir
     # en pantalla el nombre y apellido que vienen por parámetro
-
     print('\n\nNombre: {}, Apellido: {}\n\n'.format(nombre, apellido))
-
+    
     # Otra Forma:
     #name ='\n\nNombre: {}, Apellido: {}\n\n'.format(nombre, apellido)
     #print(name)
 
 
 
-def promedio(numeros):
+def promedio (numeros):
     # Alumno:
     # 1) calcule el promedio
     # 2) use "return" para retornar ese valor
-
     if numeros == []:
         return None
-
     else:
         prom = sum(numeros) / len(numeros)
         return prom
 
 
-def ordenar(numeros):
-
+def ordenar (numeros):
+    """
+    Función que Recibe una lista de Nros.
+    Retorna la Lista de Nros. Ordenada de Menor a Mayor.98    """
     if numeros == []:
         return None
-
     else:
-        # Retorno la Lista Ordenada.
-        return sorted(numeros)
+        return sorted(numeros)  # Retorno la Lista Ordenada.
+
+
+def lista_aleatoria (inicio=0, fin=1, cantidad= 1 ):
+    # Inicializo la Lista ==> Lista Vacía
+    numeros_aleatorios = []
+    i = 0
+
+    while i < cantidad:
+        numero = random.randrange(inicio, fin+1)
+        numeros_aleatorios.append(numero)
+        i += 1
+
+    return numeros_aleatorios
 
 
 
@@ -141,6 +150,8 @@ def ej3():
 
 def ej4():
     # Ejercicios con modulos del sistema
+
+    # Inicialización de las variables
     inicio = 0
     fin = 10
     cantidad = 5
@@ -148,7 +159,7 @@ def ej4():
     # Ejemplo de como obtener un numero aleatorio
     # entre inicio y fin
     # inicio <= numero <= fin
-    numero = random.randrange(inicio, fin+1)
+    # numero = random.randrange(inicio, fin+1)
     # Documentación oficial de random
     # https://docs.python.org/3.7/library/random.html
     # Ante cualquier duda preguntar en el campus!
@@ -173,8 +184,9 @@ def ej4():
     '''
 
     # Invocar lista_aleatoria
-    # mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
-    # print(mi_lista_aleatorio)
+    mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
+    
+    print('\nLa Lista Aleatoria de Nros. dentro del rango [{}, {}] es: {}\n\n'.format(inicio, fin+1, mi_lista_aleatorio))
 
 
 def ej5():
@@ -204,6 +216,6 @@ if __name__ == '__main__':
     print("\n\nBienvenidos a otra clase de Inove con Python.\n\n")
     #ej1()
     #ej2()
-    ej3()
-    # ej4()
+    #ej3()
+    ej4()
     # ej5()

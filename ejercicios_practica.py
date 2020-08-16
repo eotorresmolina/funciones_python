@@ -16,8 +16,10 @@ __email__ = "emmaotm@gmail.com"
 __version__ = "1.3"
 
 
+import myfunctions as myf
+
 def ej1():
-    print('Comencemos a crear lo nuestro!')
+    print('\nComencemos a crear lo Nuestro!:\n\n')
 
     '''
     Cree un nuevo archivo el cual será su módulo que utilizará
@@ -32,10 +34,12 @@ def ej1():
     Importe el módulo a este programa/documento para su uso
     en el resto de los ejercicios
     '''
+    # Realizo la Importación para este programa haciendo:
+    #import myfunctions
 
 
 def ej2():
-    print("Jugando a los dados")
+    print("Jugando a los dados:")
 
     '''
     Un dado común tiene 6 caras, 6 resultados posibles
@@ -55,9 +59,19 @@ def ej2():
     Imprimir en pantalla la lista ordenada
     '''
 
+    # Inicialización de Variables:
+    min_valor_dado = 1
+    max_valor_dado = 6
+    cantidad_tiros = 5
+
+    resultados = myf.lista_aleatoria(min_valor_dado, max_valor_dado, cantidad_tiros)
+    
+    myf.ordenar_2(resultados)
+    print('\n\nLos Resultados de los Tiros Ordenados de Menor a Mayor son: {}\n\n'.format(resultados))
+
 
 def ej3():
-    print("Jugando a los dados")
+    print("Jugando a los dados:")
 
     '''
     Un dado común tiene 6 caras, 6 resultados posibles
@@ -95,7 +109,7 @@ def ej4():
     '''
     Este ejercicio representa ya un problema que forma parte de un juego
     Lo que se desea realizar es una parte del juego "la generala".
-    El enunciado está armado a modo de guía, pueden resolver el problemla
+    El enunciado está armado a modo de guía, pueden resolver el problema
     de otra forma.
     Si tienen dudas sobre el enunciado o alguno de los puntos por favor
     comuníquelo por el campus y lo discutiremos entre todos, ya que siempre
@@ -104,11 +118,11 @@ def ej4():
     Deberá realizar una lista para guardar 5 dados, guardar los números
     sacados en esa tirada de de dados (son 5 números del 1 al 6)
 
-    1) El jugador tira la dados y sacar 5 números aleatorios, puede usar
+    1) El jugador tira la dados y saca 5 números aleatorios, puede usar
     la función de "lista_aleatoria" para generar dichos números.
 
     2) Luego debe analizar los 5 números y ver cual es el número que
-    más se repitio entre los 5 dados.
+    más se repitió entre los 5 dados.
     Debe usar la función de Python max con la key de list.count paara
     determinar cual fue el número que más se repitió. Consultar los ejemplos
     vistos en clase o el ejercicio anterior de esta guia.
@@ -120,7 +134,7 @@ def ej4():
     dados_guardados = [4,4,4]
     Debe realizar un bucle para recorrer la lista de dados_tirados
     y guardar los "4" en nuestra nueva lista dados_guardados
-    Utilie append para ir sumando a dados_guardados los valores
+    Utilice append para ir sumando a dados_guardados los valores
 
     4) Debe volver a tira los dados, generar nuevos
     números aleatorios.
@@ -147,8 +161,8 @@ def ej4():
 
 
 if __name__ == '__main__':
-    print("Ejercicios de práctica")
-    # ej1()
-    # ej2()
+    print("\n\nEjercicios de práctica.\n\n")
+    ej1()
+    ej2()
     # ej3()
     # ej4()

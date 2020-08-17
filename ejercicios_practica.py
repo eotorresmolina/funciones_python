@@ -87,12 +87,12 @@ def ej3():
 
     1)
     Utilice la función "contar" para contar cuantas veces aparece:
-    a - Cuantsa veces aparece el número 1 en su lista de dados tirados
-    b - Cuantsa veces aparece el número 2 en su lista de dados tirados
-    c - Cuantsa veces aparece el número 3 en su lista de dados tirados
-    d - Cuantsa veces aparece el número 4 en su lista de dados tirados
-    e - Cuantsa veces aparece el número 5 en su lista de dados tirados
-    f - Cuantsa veces aparece el número 6 en su lista de dados tirados
+    a - Cuantas veces aparece el número 1 en su lista de dados tirados
+    b - Cuantas veces aparece el número 2 en su lista de dados tirados
+    c - Cuantas veces aparece el número 3 en su lista de dados tirados
+    d - Cuantas veces aparece el número 4 en su lista de dados tirados
+    e - Cuantas veces aparece el número 5 en su lista de dados tirados
+    f - Cuantas veces aparece el número 6 en su lista de dados tirados
 
 
     2)
@@ -101,6 +101,25 @@ def ej3():
     vistos en clase para ver como se implementa max con esa key
 
     '''
+
+    # Inicialización de Variables:
+    min_valor_dado = 1
+    max_valor_dado = 6
+    cantidad_tiros = 5
+
+    resultados = myf.lista_aleatoria(min_valor_dado, max_valor_dado, cantidad_tiros)
+    print('\n\nLos Resultados de los Tiros son: {}\n'.format(resultados))
+
+    for i in range(min_valor_dado, max_valor_dado + 1):
+        cantidad_veces = myf.contar(resultados, i)  # Obtengo la Cant. de Veces que aparece un Número.
+        print('La Cantidad de Veces que Aparece el Número {} son: {}'.format(i, cantidad_veces))
+
+    # max(resultados, key=resultados.count) me va a Devolver el 1er Valor que se Repite o Aparece
+    #  si hay más de un Valor Máximo.
+    max_nro_repetido = max(resultados, key=resultados.count)
+    print('\nEl Número Mayor que Más se Repitió en los Tiros es: {}\n\n'.format(max_nro_repetido))
+
+    
 
 
 def ej4():
@@ -162,7 +181,7 @@ def ej4():
 
 if __name__ == '__main__':
     print("\n\nEjercicios de práctica.\n\n")
-    ej1()
-    ej2()
-    # ej3()
+    #ej1()
+    #ej2()
+    ej3()
     # ej4()

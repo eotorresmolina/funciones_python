@@ -1,3 +1,13 @@
+'''
+Funciones
+---------------------------
+Autor: Torres Molina Emmanuel Oscar
+Version: 1.1
+Descripcion:
+Módulo con algunas de las funciones que se
+utilizaron para el archivo "ejercicios_practica.py"
+'''
+
 
 __author__ = "Emmanuel Oscar Torres Molina"
 __email__ = "emmaotm@gmail.com"
@@ -64,5 +74,6 @@ def contar (lista_numeros, numero_repetido = 0):
     a contar.
     Retorna la cantidad de veces que aparece dicho valor
     en la lista.
+
     """
     return lista_numeros.count(numero_repetido)
